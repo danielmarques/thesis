@@ -1,0 +1,30 @@
+\select@language {american}
+\select@language {american}
+\select@language {brazilian}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Exemplo de dados para classifica\IeC {\c c}\IeC {\~a}o}}{19}{table.2.1}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Exemplo de dados para \textit {ranking}}}{20}{table.2.2}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Matriz de confus\IeC {\~a}o do modelo \textit {M}}}{22}{table.2.3}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Exemplo com tr\IeC {\^e}s classes}}{24}{table.2.4}
+\contentsline {table}{\numberline {2.5}{\ignorespaces Resultados do exemplo com tr\IeC {\^e}s classes}}{24}{table.2.5}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Valores percentuais das acur\IeC {\'a}cias do exemplo da Figura \ref {fig:descricaodostestes01}}}{36}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Contabiliza\IeC {\c c}\IeC {\~a}o dos valores para m\IeC {\'e}tricas de n\IeC {\'\i }vel 1 do exemplo da Figura \ref {fig:descricaodostestes03}}}{38}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Contabiliza\IeC {\c c}\IeC {\~a}o dos valores para m\IeC {\'e}tricas de n\IeC {\'\i }vel 2 do exemplo da Figura \ref {fig:descricaodostestes03}}}{38}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Contabiliza\IeC {\c c}\IeC {\~a}o dos valores das m\IeC {\'e}tricas de cada classe de n\IeC {\'\i }vel 1 e 2 para o exemplo da Figura \ref {fig:descricaodostestes03}}}{39}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Valores percentuais do \textit {Macro Precision} e \textit {Macro Recall} do exemplo da Figura \ref {fig:descricaodostestes03}}}{39}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Configura\IeC {\c c}\IeC {\~o}es dos algoritmos}}{40}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Conjuntos de dados}}{40}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Tempos m\IeC {\'e}dios de execu\IeC {\c c}\IeC {\~a}o em milissegundos}}{41}{table.4.8}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Valores de acur\IeC {\'a}cia m\IeC {\'e}dios por algoritmo}}{42}{table.4.9}
+\contentsline {table}{\numberline {4.10}{\ignorespaces N\IeC {\'u}mero de vezes que cada configura\IeC {\c c}\IeC {\~a}o ganhou}}{42}{table.4.10}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Valores de \textit {Macro k-Precision} m\IeC {\'e}dios por algoritmo}}{43}{table.4.11}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Valores de \textit {Macro k-Recall} m\IeC {\'e}dios por algoritmo}}{44}{table.4.12}
+\contentsline {table}{\numberline {4.13}{\ignorespaces \textit {Macro k-Precision}: N\IeC {\'u}mero de vezes que cada configura\IeC {\c c}\IeC {\~a}o ganhou}}{44}{table.4.13}
+\contentsline {table}{\numberline {4.14}{\ignorespaces \textit {Macro k-Recall}: N\IeC {\'u}mero de vezes que cada configura\IeC {\c c}\IeC {\~a}o ganhou}}{44}{table.4.14}
+\contentsline {table}{\numberline {4.15}{\ignorespaces Vers\IeC {\~o}es de quantidades de inst\IeC {\^a}ncias de cada classe}}{45}{table.4.15}
+\contentsline {table}{\numberline {4.16}{\ignorespaces Valores percentuais de ganho do Metaclassificador em rela\IeC {\c c}\IeC {\~a}o ao \textit {Benchmark}}}{50}{table.4.16}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
