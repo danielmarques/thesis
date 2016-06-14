@@ -1,7 +1,7 @@
 %% -*- coding: utf-8; -*-
 
 \documentclass[
-  phd
+  msc
 ]{ThesisPUC}
 
 
@@ -72,32 +72,30 @@
 %%% Titulos
 %%%
 
-\author{Julio César Álvarez Iglesias}
-\authorR{Álvarez Iglesias, Julio César}
+\author{Daniel da Rosa Marques}
+\authorR{Marques, Daniel da Rosa}
 
-\adviser{Sidnei Paciornik}{Prof.}
-\adviserR{Paciornik, Sidnei}
+\adviser{Eduardo Sany Laber}{Prof.}
+\adviserR{Laber, Eduardo Sany}
 
-\coadviser{Otávio da Fonseca Martins Gomes}{Dr.}
-\coadviserR{da Fonseca Martins Gomes, Otávio}
-\coadviserInst{Centro de Tecnologia Mineral}{CETEM/MCTI}
+%\coadviser{Otávio da Fonseca Martins Gomes}{Dr.}
+%\coadviserR{da Fonseca Martins Gomes, Otávio}
+%\coadviserInst{Centro de Tecnologia Mineral}{CETEM/MCTI}
 
-\title{Desenvolvimento de um sistema de microscopia digital para
-  classificação automática de tipos de hematita em minério de ferro}
+\title{Um Metaclassificador para Encontrar as K-Classes mais Relevantes}
 
-\titleuk{Development of a digital microscopy system for automatic
-  classification of hematite types in iron ore.}
+\titleuk{A Metaclassifier for Finding the K-Classes most Relevants}
 
 %% \subtitulo{Aqui vai o subtitulo caso precise}
 
-\day{9}
-\month{Agosto}
-\year{2012}
+\day{7}
+\month{Novembro}
+\year{2015}
 
 \city{Rio de Janeiro}
 \CDD{620.11}
-\department{Engenharia de Materiais}
-\program{Engenharia de Materiais e de Processos Químicos e Metalúrgicos}
+\department{Informática}
+\program{Informática}
 \school{Centro Técnico Científico}
 \university{Pontifícia Universidade Católica do Rio de Janeiro}
 \uni{PUC-Rio}
@@ -108,15 +106,11 @@
 %%%
 
 \jury{%
-  \jurymember{Paulo Roberto Gomes Brandão}{Prof.}
-    {Universidade Federal de Minas Gerais}{UFMG}
-  \jurymember{Leonardo Evangelista Lagoeiro}{Prof.}
-    {Universidade Federal de Ouro Preto}{UFOP}
-  \jurymember{Reiner Neumann}{Dr.}
-    {Centro de Tecnologia Mineral}{CETEM/MCTI}
-  \jurymember{Marcos Henrique de Pinho Maurício}{Dr.}
-    {Departamento de Engenharia de Materiais}{PUC-Rio}
-  \schoolhead{José Eugenio Leal}{Prof.}
+  \jurymember{Ruy Luiz Milidiú}{Dr.}
+    {Pontifícia Universidade Católica do Rio de Janeiro}{PUC-Rio}
+  \jurymember{Raul Pierre Renteria}{Dr.}
+    {Pontifícia Universidade Católica do Rio de Janeiro}{PUC-Rio}
+%  \schoolhead{José Eugenio Leal}{Prof.}
 }
 
 
@@ -125,8 +119,7 @@
 %%%
 
 \resume{%
-  Graduou-se em Física pela Universidade da Havana (Havana,
-  Cuba). Fez mestrado ...}
+Graduou-se em Engenharia Eletrônica e da Computação na Universidade Federal do Rio de Janeiro. Trabalhou com desenvolvimento de soluções de informática em diversas empresas.}
 
 
 %%%
@@ -134,8 +127,17 @@
 %%%
 
 \acknowledgment{%
-  Em primeiro lugar, gostaria de agradecer especialmente a meu
-  orientador ...
+Ao meu orientador Professor Eduardo Sany Laber pelo apoio e orientação no desenvolvimento deste trabalho.
+
+À CAPES e à PUC--Rio, pelos auxílios concedidos, os quais possibilitaram a realização deste trabalho.
+
+Ao Félix Ribeiro, minha maior fonte de inspiração e coragem, sem ele nada disso seria possível.
+
+A minha mãe, irmã e família, sempre presentes e na torcida.
+
+Aos funcionários do departamento de Informática pela a ajuda de costume.
+
+Aos meus colegas da PUC--Rio, que também me ajudaram nessa jornada.
 }
 
 
@@ -144,21 +146,14 @@
 %%%
 
 \keywords{%
-  \key{Minério de Ferro;}
-  \key{Cristais de Hematita;}
-  \key{Microscopia Digital;}
-  \key{Análise de Imagens;}
-  \key{Classificação;}
-  \key{Microscopia de Luz Polarizada.}
+ \key{Aprendizado de Máquina;}%
+ \key{Ranking}%
 }
+% \keywords{Aprendizado de Máquina; Ranking}
 
 \keywordsuk{%
-  \key{Iron Ore;}%
-  \key{Hematite Crystals;}%
-  \key{Digital Microscopy;}%
-  \key{Image Analysis;}%
-  \key{Classification;}%
-  \key{Polarized Light Microscopy.}%
+  \key{Machine Learning;}%
+  \key{Ranking}%
 }
 
 
@@ -167,24 +162,44 @@
 %%%
 
 \abstract{%
-  O minério de ferro é um material policristalino oriundo de processos
-  naturais complexos durante tempos geológicos, que dão origem ...
+Considere uma rede com \textit{k} nodos que pode apresentar falhas ao longo de sua operação. 
+Além disso, assuma que é inviável verificar todos os nodos sempre que uma falha ocorre.
+Motivados por este cenário, propomos um método que usa aprendizado de máquina supervisionado para gerar \textit{rankings} dos nodos mais prováveis por serem responsáveis pela falha.
+O método proposto é um metaclassificador que pode utilizar qualquer tipo de classificador internamente, onde o modelo gerado pelo metaclassificador é uma composição daqueles gerados pelos classificadores internos. 
+Cada modelo interno é treinado com um subconjunto dos dados.
+Estes subconjuntos são criados sucessivamente a partir dos dados originais eliminando-se algumas instâncias. 
+As instâncias eliminadas são aquelas cujas classes já foram colocadas no ranking.
+Métricas derivadas da \textit{Acurácia}, \textit{Precision} e \textit{Recall} foram propostas e usadas para avaliar este método. 
+Utilizando uma base de domínio público, verificamos que os tempos de treinamento e classificação do metaclassificador são maiores que os de um classificador simples. 
+Entretanto ele atinge resultados melhores em alguns casos, como ocorre com as árvores de decisão, que superam a acurácia do \textit{benchmark} por uma margem maior que 5\%. 
 }
 
 \abstractuk{%
-  Iron ore is a polycrystalline material created by complex natural
-  processes during geological periods, which give rise to ...}
+Consider a network with \textit{k} nodes that may fail along its operation.
+Furthermore assume that it is impossible to check all nodes whenever a failure occurs.
+Motivated by this scenario, we propose a method that uses supervised learning to generate \textit{rankings} of the most likely nodes responsible for the failure.
+The proposed method is a meta-classifier that is able to use any kind of classifier internally, where the model generated by the meta-classifier is a composition of those generated by the internal classifiers.
+Each internal model is trained with a subset of the data created from the elimination of instances whose classes were already put in the ranking.
+Metrics derived from \textit{Accuracy}, \textit{Precision} and \textit{Recall} were proposed and used to evaluate this method.
+Using a public data set, we verified that the training and classification times of the meta-classifier were greater than those of a simple classifier.
+However it reaches better results in some cases, as with the decision trees, that exceeds the benchmark accuracy for a margin greater than 5\%.
+}
 
+% Alterações Daniel
+
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
 
 %%%
 %%% Epigraph
 %%%
-
-\epigraph{%
-  My beautifull epigraph
-}
-\epigraphauthor{Wassily Kandinsky}
-\epigraphbook{Regards sur le passé}
+%
+%\epigraph{%
+%  My beautifull epigraph
+%}
+%\epigraphauthor{Wassily Kandinsky}
+%\epigraphbook{Regards sur le passé}
 
 
 %%%
@@ -193,7 +208,7 @@
 
 \begin{document}
 
-  \input{abrevs}
+  %\input{abrevs}
   \input{chapters/introducao}
   \input{chapters/conceitosbasicos}
   \input{chapters/metodoproposto}
