@@ -35,7 +35,6 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 
-
 \newcommand{\docdate}{}  % See the renewcommands below,
 \newcommand{\filedate}{} % these contain the content;-))
 \newcommand{\fileversion}{}
@@ -746,7 +745,6 @@
 \newcommand{\epigrafelivro}[1]{\epigraphbook{#1}}
 \newcommand{\tituloglossario}[1]{\abreviationstitle{#1}}
 
-
 %%%
 %%% cover
 %%%
@@ -1023,7 +1021,8 @@
   \noindent \large \arial \textbf{Palavras-chave} \normalfont \normalsize%
   \par%
   \renewcommand{\key}[1]{##1.\hspace{3mm} }%
-  \indent \puc@keywords%
+  %\indent \puc@keywords%
+  \indent Aprendizado de Máquina; Ranking.%
   \vspace*{\stretch{4}}%
   \par%
 }
@@ -1057,7 +1056,8 @@
   \noindent \large \arial \textbf{Keywords} \normalfont \normalsize%
   \par%
   \renewcommand{\key}[1]{##1.\hspace{3mm} }%
-  \indent \puc@keywordsuk%
+  %\indent \puc@keywordsuk%
+  \indent Machine Learning; Ranking.%
   \vspace*{\stretch{4}}%
   \par%
   \selectlanguage{brazilian}%
