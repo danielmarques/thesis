@@ -45,7 +45,6 @@
 \ProvidesClass{ThesisPUC}%
 [\filedate\space v\fileversion\space Thesis PUC-Rio document class]
 
-
 %%%
 %%% style options
 %%%
@@ -929,7 +928,7 @@
     \begin{tabular}{|p{0.95\linewidth}|} \hline%
       \noindent \puc@authorR \\ \\ \par%
       \hspace*{.6cm} \puc@title\relax\ / \puc@author; orientador: \puc@adviser\ifthenelse{\equal{\puc@coadviser}{}}{}{; co-orientador\ifthenelse{\equal{\puc@coadviserII}{}}{}{es}: \puc@coadviser}\ifthenelse{\equal{\puc@coadviserII}{}}{}{, \puc@coadviserII}\ifthenelse{\equal{\puc@coadviserIII}{}}{}{, \puc@coadviserIII}. -- \puc@city\ : \puc@uni, Departamento de \puc@department, \puc@year. \\ \\ \par%
-      \hspace*{.6cm} v., \pageref{LastPage} f: il. ; 29,7 cm \\ \\ \par%
+      \hspace*{.6cm} v., \pageref*{LastPage} f: il. ; 29,7 cm \\ \\ \par%
       \hspace*{.6cm} 1.   \ifthenelse{\boolean{puc@phd}}{Tese (doutorado)}{Dissertação (mestrado)} - \puc@university, Departamento de \puc@department. \\ \\ \par%
       \hspace*{.6cm} Inclui referências bibliográficas. \\ \\ \par%
       \hspace*{.6cm}%
@@ -1042,7 +1041,7 @@
   \vspace{\stretch{3}}%
   \par\indent%
   \begin{minipage}{12cm}\singlespacing%
-  \puc@authorR; \puc@adviserR\ifthenelse{\equal{\puc@coadviser}{}}{}{; \puc@coadviserR}\ifthenelse{\equal{\puc@coadviserII}{}}{}{; \puc@coadviserIIR}\ifthenelse{\equal{\puc@coadviserIII}{}}{}{; \puc@coadviserIIIR} (Advisor). \textbf{\puc@titleuk}. \puc@city, \puc@year. \pageref{LastPage}p.   \ifthenelse{\boolean{puc@phd}}{PhD Thesis}{MsC Thesis} -- Department of \puc@department, \puc@university.%
+  \puc@authorR; \puc@adviserR\ifthenelse{\equal{\puc@coadviser}{}}{}{; \puc@coadviserR}\ifthenelse{\equal{\puc@coadviserII}{}}{}{; \puc@coadviserIIR}\ifthenelse{\equal{\puc@coadviserIII}{}}{}{; \puc@coadviserIIIR} (Advisor). \textbf{\puc@titleuk}. \puc@city, \puc@year. \pageref{LastPage}p.   \ifthenelse{\boolean{puc@phd}}{PhD Thesis}{MsC Thesis} -- Departamento de \puc@department, \puc@university.%
   \end{minipage}\onehalfspacing%
   \vspace*{\stretch{1}}%
   \par%
